@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Motion } from "@animemotion/vue";
+import { Motion, motion } from "@animemotion/vue";
 
 const key = ref(0);
 
@@ -14,7 +14,13 @@ function refreshAnimation() {
     刷新动画
   </button>
 
-  <Motion
+  <motion.div
+    :key="key"
+    :initial="{ scale: 0 }"
+    :animate="{ rotate: 180, scale: 1, backgroundColor: 'rgb(255, 255, 255)' }"
+  />
+
+  <motion.section
     :key="key"
     :initial="{ scale: 0 }"
     :animate="{ rotate: 180, scale: 1, backgroundColor: 'rgb(255, 255, 255)' }"
@@ -27,7 +33,8 @@ body {
   background-color: black;
 }
 
-div {
+div,
+section {
   width: 100px;
   height: 100px;
   border-radius: 10px;
