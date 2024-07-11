@@ -1,6 +1,6 @@
 import { defineComponent, h } from "vue";
-import { type MotionProps, motionProps } from "./types";
-import Motion from "./Motion.vue";
+import { type MotionProps, motionProps } from "../types/types";
+import Motion from "../components/Motion.vue";
 const createMotionElement = (tag: string) => {
   const Component = defineComponent({
     props: motionProps,

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Motion, motion } from "@animemotion/vue";
+import { motion } from "@animemotion/vue";
 
 const key = ref(0);
 
